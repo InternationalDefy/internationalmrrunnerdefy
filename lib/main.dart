@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:internationalmrrunnerdefy/IndustryExperience.dart';
+import 'package:internationalmrrunnerdefy/PersonalProject.dart';
+import 'package:internationalmrrunnerdefy/SelfLearning.dart';
 import 'HomePage.dart';
 
 void main() {
@@ -17,6 +20,14 @@ class InternationalMrRunnerDefy extends StatelessWidget {
         primarySwatch: Colors.lightBlue,
       ),
       home: HomePage(),
+      routes: sNavigationRoutes,
     );
   }
 }
+
+Map<String, WidgetBuilder> sNavigationRoutes = {
+  HomePage.routeName: (context) => HomePage(),
+  IndustryExperience.routeName: (context) => IndustryExperience(),
+  PersonalProject.routeName: (context) => PersonalProject(),
+  SelfLearning.routeName: (context) => SelfLearning(),
+};
