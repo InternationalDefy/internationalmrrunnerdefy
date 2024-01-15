@@ -55,3 +55,12 @@ TextStyle gTextStyleNormal = GoogleFonts.kanit(
     fontStyle: FontStyle.normal,
   ),
 );
+
+TextStyle gTextStyleSmall = GoogleFonts.kanit(
+  textStyle: const TextStyle(
+    color: Colors.black87,
+    fontSize: 18.0,
+    fontWeight: FontWeight.normal,
+    fontStyle: FontStyle.normal,
+  ),
+);

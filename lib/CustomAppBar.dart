@@ -19,6 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         backgroundColor: Colors.lightBlue[50],
         automaticallyImplyLeading: false,
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             RichText(
               text: TextSpan(
@@ -30,7 +31,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           .pushReplacementNamed(HomePage.routeName);
                     }),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
             RichText(
@@ -43,7 +44,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           .pushReplacementNamed(HomePage.routeName);
                     }),
             ),
-            Spacer(),
+            const Spacer(),
             RichText(
               text: TextSpan(
                   text: "Self Learning",
@@ -53,7 +54,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                       Navigator.of(context).pushNamed(SelfLearning.routeName);
                     }),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
             RichText(
@@ -66,7 +67,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           .pushNamed(PersonalProject.routeName);
                     }),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
             RichText(
@@ -79,11 +80,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                           .pushNamed(IndustryExperience.routeName);
                     }),
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
           ],
-          mainAxisAlignment: MainAxisAlignment.start,
         ),
       ));
 }
