@@ -1,8 +1,7 @@
-import 'dart:ffi';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper_view/flutter_swiper_view.dart';
+import 'package:internationalmrrunnerdefy/ImageCard.dart';
 import 'package:internationalmrrunnerdefy/Styles.dart';
 
 import 'CustomAppBar.dart';
@@ -98,44 +97,73 @@ List<_ListInfo> _listInfo = [
   ),
 ];
 
+List<ImageCardInfo> _infoList = [
+  ImageCardInfo(
+    title: 'This is Mr.Runner',
+    height: 360.0,
+    content:
+        '     A Gamer, Game-developer, Raver and Bicycle-rider. Currently a post-graduate in master of software engineering at East China Normal University, have received software engineering bachelor degree in Huazhong University of Science and Techonology in 2020, with one-and-a-half year of game developing experience. ACTIVE for ANY intership or remote game programmer oppotunities.',
+    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\rave_bg.jpg',
+    backgroundColor: const Color(0xeed1faff),
+    lhs: true,
+  ),
+  ImageCardInfo(
+    title: 'As a Gamer',
+    height: 360.0,
+    content:
+        '     I have a decent game collection and thousands of hours gameplay time. I\'ve played many different types of games like RPG, FPS, Racing, strategy games... I have plenty of experience in games and the sense of good game design. Always thinking of design and implementations while playing, and have written many game reviews.',
+    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\steam_bg.png',
+    backgroundColor: const Color(0xee6a8eae),
+    lhs: false,
+    navigationWidget: TextButton(
+      child: Text(
+        'Steam Homepage',
+        style: gGlitchStyleNormal,
+      ),
+      onPressed: () {},
+    ),
+  ),
+];
+
 class _HomepageBodyState extends State<_HomePageBody> {
   int _index = 0;
   @override
-  Widget build(BuildContext context) => Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
+  Widget build(BuildContext context) => ListView(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 60.0),
-                child: Center(
-                  child: SizedBox(
-                    width: 540,
-                    height: 360,
-                    child: Swiper(
-                      onIndexChanged: (newIndex) => setState(() {
-                        _index = newIndex;
-                      }),
-                      itemBuilder: (context, index) =>
-                          _listInfo[index].imageWidget(),
-                      itemCount: _listInfo.length,
-                      pagination: const SwiperPagination(
-                          builder: SwiperPagination.rect),
-                      control: null,
-                      loop: true,
-                      autoplay: true,
-                      duration: 150,
-                      autoplayDelay: 5000,
-                    ),
-                  ),
-                ),
-              ),
-              Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 100.0),
-                  child: _listInfo[_index].contentWidget()),
-            ],
-          ),
+          ImageCard(info: _infoList[0]),
+          ImageCard(info: _infoList[1]),
+          // Row(
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: [
+          //     Padding(
+          //       padding: const EdgeInsets.symmetric(vertical: 60.0),
+          //       child: Center(
+          //         child: SizedBox(
+          //           width: 540,
+          //           height: 360,
+          //           child: Swiper(
+          //             onIndexChanged: (newIndex) => setState(() {
+          //               _index = newIndex;
+          //             }),
+          //             itemBuilder: (context, index) =>
+          //                 _listInfo[index].imageWidget(),
+          //             itemCount: _listInfo.length,
+          //             pagination: const SwiperPagination(
+          //                 builder: SwiperPagination.rect),
+          //             control: null,
+          //             loop: true,
+          //             autoplay: true,
+          //             duration: 150,
+          //             autoplayDelay: 5000,
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Padding(
+          //         padding: const EdgeInsets.symmetric(horizontal: 100.0),
+          //         child: _listInfo[_index].contentWidget()),
+          //   ],
+          // ),
         ],
       );
 }
