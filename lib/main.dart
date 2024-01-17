@@ -8,6 +8,8 @@ void main() {
   runApp(const InternationalMrRunnerDefy());
 }
 
+final GlobalKey<NavigatorState> gNavigatorKey = GlobalKey<NavigatorState>();
+
 class InternationalMrRunnerDefy extends StatelessWidget {
   const InternationalMrRunnerDefy({super.key});
 
@@ -21,6 +23,7 @@ class InternationalMrRunnerDefy extends StatelessWidget {
       ),
       home: HomePage(),
       routes: sNavigationRoutes,
+      navigatorKey: gNavigatorKey,
     );
   }
 }

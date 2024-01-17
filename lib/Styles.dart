@@ -50,7 +50,7 @@ TextStyle gGlitchStyleNormal = GoogleFonts.rubikGlitch(
 TextStyle gTextStyleNormal = GoogleFonts.kanit(
   textStyle: const TextStyle(
     color: Colors.black87,
-    fontSize: 22.0,
+    fontSize: 26.0,
     fontWeight: FontWeight.normal,
     fontStyle: FontStyle.normal,
   ),
@@ -59,7 +59,7 @@ TextStyle gTextStyleNormal = GoogleFonts.kanit(
 TextStyle gTextStyleSmall = GoogleFonts.kanit(
   textStyle: const TextStyle(
     color: Colors.black87,
-    fontSize: 18.0,
+    fontSize: 22.0,
     fontWeight: FontWeight.normal,
     fontStyle: FontStyle.normal,
   ),

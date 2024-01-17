@@ -28,74 +28,84 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
   ImageCard({required this.info});
   @override
   Size get preferredSize => Size.fromHeight(info.height);
-  Widget _imageWidget() => Center(
+  Widget _imageWidget(double width) => Center(
         child: Image.file(
           File(info.image),
           height: info.height,
-          width: 720.0,
+          width: width,
           fit: BoxFit.contain,
         ),
       );
-  Widget _contentWidget() => Container(
-        height: info.height,
-        width: 720.0,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: null == info.navigationWidget
-              ? [
-                  Text(
-                    info.title,
-                    style: gTitleStyleNormal,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 36.0),
-                  ),
-                  Text(
-                    info.content,
-                    style: gTextStyleSmall,
-                    textAlign: TextAlign.left,
-                  ),
-                ]
-              : [
-                  Text(
-                    info.title,
-                    style: gTitleStyleNormal,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 36.0),
-                  ),
-                  Text(
-                    info.content,
-                    style: gTextStyleSmall,
-                    textAlign: TextAlign.left,
-                  ),
-                  const Padding(
-                    padding: EdgeInsets.only(top: 36.0),
-                  ),
-                  info.navigationWidget!,
-                ],
+  Widget _contentWidget(double width, double hPadding, double vPadding) =>
+      Padding(
+        padding: EdgeInsets.symmetric(
+          horizontal: hPadding,
+          vertical: vPadding,
+        ),
+        child: SizedBox(
+          height: info.height,
+          width: width - 2 * hPadding,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: null == info.navigationWidget
+                ? [
+                    Text(
+                      info.title,
+                      style: gTitleStyleNormal,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 24.0),
+                    ),
+                    Text(
+                      info.content,
+                      style: gTextStyleSmall,
+                      textAlign: TextAlign.left,
+                    ),
+                  ]
+                : [
+                    Text(
+                      info.title,
+                      style: gTitleStyleNormal,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 24.0),
+                    ),
+                    Text(
+                      info.content,
+                      style: gTextStyleSmall,
+                      textAlign: TextAlign.left,
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 24.0),
+                    ),
+                    info.navigationWidget!,
+                  ],
+          ),
         ),
       );
   @override
-  Widget build(BuildContext context) => Container(
-        height: info.height,
-        color: info.backgroundColor,
-        child: Row(
-          mainAxisAlignment:
-              info.lhs ? MainAxisAlignment.start : MainAxisAlignment.end,
-          children: info.lhs
-              ? [
-                  _imageWidget(),
-                  Center(
-                    child: _contentWidget(),
-                  ),
-                ]
-              : [
-                  Center(
-                    child: _contentWidget(),
-                  ),
-                  _imageWidget(),
-                ],
-        ),
-      );
+  Widget build(BuildContext context) {
+    double iWidth = info.height * 2;
+    double cWidth = MediaQuery.of(context).size.width - iWidth;
+    double hPadding = MediaQuery.of(context).size.width * 0.1;
+    hPadding = (cWidth - 2 * hPadding) > 0 ? hPadding : 0;
+    double vPadding = MediaQuery.of(context).size.height * 0.05;
+    return Container(
+      height: info.height,
+      color: info.backgroundColor,
+      child: Row(
+        mainAxisAlignment:
+            info.lhs ? MainAxisAlignment.start : MainAxisAlignment.end,
+        children: info.lhs
+            ? [
+                _imageWidget(iWidth),
+                _contentWidget(cWidth, hPadding, vPadding),
+              ]
+            : [
+                _contentWidget(cWidth, hPadding, vPadding),
+                _imageWidget(iWidth),
+              ],
+      ),
+    );
+  }
 }

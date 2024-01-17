@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
+import 'package:flutter/services.dart';
+
+import 'package:url_launcher/url_launcher.dart';
+
+import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
 import 'package:internationalmrrunnerdefy/IndustryExperience.dart';
 import 'package:internationalmrrunnerdefy/HomePage.dart';
@@ -45,15 +50,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     }),
             ),
             const Spacer(),
-            RichText(
-              text: TextSpan(
-                  text: "Self Learning",
-                  style: gTitleStyleSmall,
-                  recognizer: TapGestureRecognizer()
-                    ..onTap = () {
-                      Navigator.of(context).pushNamed(SelfLearning.routeName);
-                    }),
-            ),
             const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
@@ -83,7 +79,96 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
             const Padding(
               padding: EdgeInsets.only(left: 22.0),
             ),
+            RichText(
+              text: TextSpan(
+                  text: "Résumé",
+                  style: gTitleStyleSmall,
+                  recognizer: TapGestureRecognizer()..onTap = () {}),
+            ),
           ],
         ),
       ));
+}
+
+List<Widget> gBottomBarWidgetList() {
+  return [
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Contact me:',
+          style: gTextStyleNormal,
+        ),
+        const Padding(padding: EdgeInsets.only(left: 20.0)),
+        IconButton(
+          onPressed: () {
+            Clipboard.setData(
+                const ClipboardData(text: "thetruemrrunner@gmail.com"));
+          },
+          icon: const Icon(
+            MaterialIcons.email,
+            size: 24.0,
+          ),
+        ),
+        const Padding(padding: EdgeInsets.only(left: 10.0)),
+        Text(
+          'thetruemrrunner@gmail.com',
+          style: gTextStyleNormal,
+        ),
+        const Padding(padding: EdgeInsets.only(left: 20.0)),
+        IconButton(
+          onPressed: () {
+            final Uri url = Uri.parse('https://github.com/InternationalDefy');
+            launchUrl(url);
+          },
+          icon: const Icon(
+            FontAwesome5Brands.github,
+            size: 24.0,
+          ),
+        ),
+        const Padding(padding: EdgeInsets.only(left: 10.0)),
+        Text(
+          'InternationalDefy',
+          style: gTextStyleNormal,
+        ),
+        const Padding(padding: EdgeInsets.only(left: 20.0)),
+        IconButton(
+          onPressed: () {
+            final Uri url =
+                Uri.parse('https://steamcommunity.com/id/InternationalDefy/');
+            launchUrl(url);
+          },
+          icon: const Icon(
+            FontAwesome5Brands.steam,
+            size: 24.0,
+          ),
+        ),
+        const Padding(padding: EdgeInsets.only(left: 10.0)),
+        Text(
+          'Mr.Runner',
+          style: gTextStyleNormal,
+        ),
+      ],
+    ),
+    Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'This website is built with Flutter, a fast, productive, frontend builder.',
+          style: gTextStyleSmall,
+        ),
+        const Padding(padding: EdgeInsets.only(left: 20.0)),
+        IconButton(
+          onPressed: () {
+            final Uri url = Uri.parse('https://flutter.dev/');
+            launchUrl(url);
+          },
+          icon: const FlutterLogo(
+            size: 24.0,
+            duration: Duration.zero,
+          ),
+        )
+      ],
+    ),
+  ];
 }
