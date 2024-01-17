@@ -10,6 +10,8 @@ import 'package:internationalmrrunnerdefy/main.dart';
 
 import 'CustomAppBar.dart';
 
+ScrollController sHomePageController = ScrollController();
+
 List<ImageCardInfo> _infoList = [
   ImageCardInfo(
     title: 'This is Mr.Runner',
@@ -19,6 +21,19 @@ List<ImageCardInfo> _infoList = [
     image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\cos1.jpg',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
+    navigationWidget: TextButton(
+      child: Text(
+        'Contact Me',
+        style: gTitleStyleNormal,
+      ),
+      onPressed: () {
+        sHomePageController.animateTo(
+          sHomePageController.position.maxScrollExtent,
+          duration: const Duration(milliseconds: 500),
+          curve: Curves.linear,
+        );
+      },
+    ),
   ),
   ImageCardInfo(
     title: 'As a Gamer',
@@ -84,6 +99,13 @@ List<ImageCardInfo> _infoList = [
     image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bicycle_bg.jpg',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
+    navigationWidget: TextButton(
+      child: Text(
+        'Résumé',
+        style: gTitleStyleNormal,
+      ),
+      onPressed: () {},
+    ),
   ),
 ];
 
@@ -97,6 +119,7 @@ class _HomepageBodyState extends State<_HomePageBody> {
     }
     tobeChildren.addAll(gBottomBarWidgetList());
     return ListView(
+      controller: sHomePageController,
       children: tobeChildren,
     );
   }

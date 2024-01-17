@@ -164,7 +164,7 @@ List<Widget> gBottomBarWidgetList() {
             launchUrl(url);
           },
           icon: const FlutterLogo(
-            size: 24.0,
+            size: 28.0,
             duration: Duration.zero,
           ),
         )
