@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) => Hero(
       tag: "Fixed UI",
       child: AppBar(
-        shadowColor: Colors.lightBlue[100],
+        shadowColor: Colors.lightBlue[50],
         toolbarHeight: 120.0,
         backgroundColor: Colors.lightBlue[50],
         automaticallyImplyLeading: false,

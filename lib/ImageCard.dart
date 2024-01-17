@@ -54,7 +54,7 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
                       style: gTitleStyleNormal,
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(top: 24.0),
+                      padding: EdgeInsets.only(top: 20.0),
                     ),
                     Text(
                       info.content,
@@ -68,7 +68,7 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
                       style: gTitleStyleNormal,
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(top: 24.0),
+                      padding: EdgeInsets.only(top: 20.0),
                     ),
                     Text(
                       info.content,
@@ -76,7 +76,7 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
                       textAlign: TextAlign.left,
                     ),
                     const Padding(
-                      padding: EdgeInsets.only(top: 24.0),
+                      padding: EdgeInsets.only(top: 20.0),
                     ),
                     info.navigationWidget!,
                   ],
@@ -87,9 +87,9 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     double iWidth = info.height * 2;
     double cWidth = MediaQuery.of(context).size.width - iWidth;
-    double hPadding = MediaQuery.of(context).size.width * 0.1;
+    double hPadding = MediaQuery.of(context).size.width * 0.07;
     hPadding = (cWidth - 2 * hPadding) > 0 ? hPadding : 0;
-    double vPadding = MediaQuery.of(context).size.height * 0.05;
+    double vPadding = MediaQuery.of(context).size.height * 0.025;
     return Container(
       height: info.height,
       color: info.backgroundColor,

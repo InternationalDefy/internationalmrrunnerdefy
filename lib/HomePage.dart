@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:internationalmrrunnerdefy/PersonalProject.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,7 +17,7 @@ List<ImageCardInfo> _infoList = [
     content:
         '     A Gamer, Game-developer, Raver and Bicycle-rider. Currently a post-graduate in software engineering, one-and-a-half year of game development experience. \n     ACTIVE for ANY oppotunities as a game programmer.',
     image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\cos1.jpg',
-    backgroundColor: const Color(0xffd1faff),
+    backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
   ),
   ImageCardInfo(
@@ -25,11 +26,11 @@ List<ImageCardInfo> _infoList = [
     content:
         '     I have a decent game collection. I\'ve played many different types of games, forming a plenty of gaming experience and the sense of good game design. Constantly thinking over design and implementations while playing games, and have written many up-voted game reviews.',
     image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\steam_bg.png',
-    backgroundColor: const Color(0xff6a8eae),
+    backgroundColor: Colors.lightBlue[50]!,
     lhs: false,
     navigationWidget: TextButton(
       child: Text(
-        'View Steam Homepage',
+        'Steam Homepage',
         style: gTitleStyleNormal,
       ),
       onPressed: () {
@@ -43,13 +44,13 @@ List<ImageCardInfo> _infoList = [
     title: 'As a Programmer',
     height: 400.0,
     content:
-        '     I have industry experience in Virtuos and Perfect World, participating in console games porting and mobile game client development.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\newswordsman.png',
-    backgroundColor: const Color(0xff6a8eae),
+        '     I used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     Last year I participated in Unity China\'s three-month summer intership, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
+    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\Unity0.jpeg',
+    backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
       child: Text(
-        'View Details',
+        'Career Experience',
         style: gTitleStyleNormal,
       ),
       onPressed: () {
@@ -61,17 +62,17 @@ List<ImageCardInfo> _infoList = [
     title: 'Self driven',
     height: 400.0,
     content:
-        '     I have industry experience in Virtuos and Perfect World, participating in console games porting and mobile game client development.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\Unity0.jpeg',
-    backgroundColor: const Color(0xFAF3DD),
+        '     I am proactive in self-learning all the time, I\'ve read serval technical books during my working period, utilizing after-work time at home.\n     After I went back in university as a post-graduate, I was active on Internet, reading and trying different open-sourced engines like Bevy, Godot, etc',
+    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bevy_bg.png',
+    backgroundColor: Colors.lightBlue[50]!,
     lhs: false,
     navigationWidget: TextButton(
       child: Text(
-        'View Details',
+        'Personal Projects',
         style: gTitleStyleNormal,
       ),
       onPressed: () {
-        gNavigatorKey.currentState!.pushNamed(IndustryExperience.routeName);
+        gNavigatorKey.currentState!.pushNamed(PersonalProject.routeName);
       },
     ),
   ),
@@ -79,19 +80,10 @@ List<ImageCardInfo> _infoList = [
     title: 'Work Life Balance',
     height: 400.0,
     content:
-        '     I have industry experience in Virtuos and Perfect World, participating in console games porting and mobile game client development.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\newswordsman.png',
-    backgroundColor: const Color(0xff6a8eae),
+        '     I am also a raver and a bicycle-rider. I\'ve been to serval eletronic music festivals, and I\'ve finished three 1000km+ bicycle-journeys on my own, visiting some of the most far-off places. I \'ve rode my bicycle from cities to countryside, through grasslands, mountains and deserts.\n     These long and arduous bicycle-journeys gave me an extremely open mind and an iron will.',
+    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bicycle_bg.jpg',
+    backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
-    navigationWidget: TextButton(
-      child: Text(
-        'View Details',
-        style: gTitleStyleNormal,
-      ),
-      onPressed: () {
-        gNavigatorKey.currentState!.pushNamed(IndustryExperience.routeName);
-      },
-    ),
   ),
 ];
 
@@ -121,6 +113,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) => Scaffold(
         appBar: CustomAppBar(),
         body: _HomePageBody(),
-        backgroundColor: const Color(0xff68B0AB),
+        backgroundColor: Colors.lightBlue[50],
       );
 }
