@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -12,7 +11,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\pdf.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/pdf.png?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
   ),
@@ -22,7 +22,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\rust0.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/rust0.jpg?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -42,7 +43,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\c++.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/c++.png?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -63,7 +65,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\rust0.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/rust0.jpg?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -84,7 +87,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\rust0.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/rust0.jpg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -105,7 +109,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\ecnusoe.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/ecnusoe.png?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -125,7 +130,8 @@ List<ImageCardInfo> _infoList = [
     height: 540.0,
     ratio: 0.45,
     content: '',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bevy_bg.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/bevy_bg.png?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
   ),

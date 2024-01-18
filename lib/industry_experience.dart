@@ -13,7 +13,8 @@ List<ImageCardInfo> _infoList = [
     ratio: 0.45,
     content:
         '    *Multi-platform commercial game engine written in Cpp.\n    *Report to senior programmer, assisted working with minimum advice.\n    *Pre-research WebGPU graphics API for WebGLPlatform(for browsers).\n    *Implement WebGPU to a stage that engine runtime can compile into .wasm file and run to draw a triangle.\n    *Read and understand previous engine codes with docs and advice, ability and habbit to write understandable docs.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\Unity.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/Unity.png?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -34,7 +35,8 @@ List<ImageCardInfo> _infoList = [
     ratio: 0.45,
     content:
         '    *Report to lead programmer, able to implement client features together with server programmers, designers and artists.\n    *Develop game features involing multiple gameplay systems, write Lua & Cpp code while considering safty and efficiency.\n    *Read and understand other gameplay systems, document my own codes in project workspace.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\newswordsman.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/newswordsman.png?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -57,7 +59,8 @@ List<ImageCardInfo> _infoList = [
     ratio: 0.45,
     content:
         '    *Report to game producer, independently working.\n    *Both projects are using Cpp language and in-house game engine.\n    *Survey in porting issues involves multiple gameplay systems.\n    *Pre-research GLSL shaders porting.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\nier.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/nier.png?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
   ),
@@ -68,7 +71,8 @@ List<ImageCardInfo> _infoList = [
     ratio: 0.45,
     content:
         '    *Report to senior programmer, assisted wroking.\n    *Write Slate UI plugin for Unreal engine.\n    *Basic understanding of Unreal engine\'s classes.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\sunkencentry.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/sunkencentry.jpg?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(

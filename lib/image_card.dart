@@ -32,8 +32,8 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(info.height);
   Widget _imageWidget(double width) => Center(
-        child: Image.file(
-          File(info.image),
+        child: Image.network(
+          info.image,
           height: info.height,
           width: width,
           fit: BoxFit.fitHeight,

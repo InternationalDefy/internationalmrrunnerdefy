@@ -17,7 +17,8 @@ List<ImageCardInfo> _infoList = [
     height: 400.0,
     content:
         '     A Gamer, Game-developer, Raver and Bicycle-rider. Currently a post-graduate in software engineering, one-and-a-half year of game development experience. \n     ACTIVE for ANY oppotunities as a game programmer.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\cos1.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/cos1.jpg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -41,7 +42,8 @@ List<ImageCardInfo> _infoList = [
     height: 400.0,
     content:
         '     I have a decent game collection. I\'ve played many different types of games, forming a plenty of gaming experience and the sense of good game design. Constantly thinking over design and implementations while playing games, and have written many up-voted game reviews.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\steam_bg.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/steam_bg.png?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: false,
     navigationWidget: TextButton(
@@ -61,7 +63,8 @@ List<ImageCardInfo> _infoList = [
     height: 400.0,
     content:
         '     I used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     Last year I participated in Unity China\'s three-month summer internship, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\Unity0.jpeg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/Unity0.jpeg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -79,7 +82,8 @@ List<ImageCardInfo> _infoList = [
     height: 400.0,
     content:
         '     I am proactive in self-learning all the time, I\'ve read serval technical books during my working period, utilizing after-work time at home.\n     After I went back in university as a post-graduate, I was active on Internet, reading and trying different open-sourced engines like Bevy, Godot, etc',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bevy_bg.png',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/bevy_bg.png?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: false,
     navigationWidget: TextButton(
@@ -97,7 +101,8 @@ List<ImageCardInfo> _infoList = [
     height: 400.0,
     content:
         '     I am also a raver and a bicycle-rider. I\'ve been to serval eletronic music festivals, and I\'ve finished three 1000km+ bicycle-journeys on my own, visiting some of the most far-off places. I \'ve rode my bicycle from cities to countryside, through grasslands, mountains and deserts.\n     These long and arduous bicycle-journeys gave me an extremely open mind and an iron will.',
-    image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\bicycle_bg.jpg',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/bicycle_bg.jpg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -105,7 +110,11 @@ List<ImageCardInfo> _infoList = [
         'Résumé',
         style: gTitleStyleNormal,
       ),
-      onPressed: () {},
+      onPressed: () {
+        final Uri url = Uri.parse(
+            'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/Résumé.pdf?raw=true');
+        launchUrl(url);
+      },
     ),
   ),
 ];

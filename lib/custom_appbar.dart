@@ -82,7 +82,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               text: TextSpan(
                   text: "Résumé",
                   style: gTitleStyleSmall,
-                  recognizer: TapGestureRecognizer()..onTap = () {}),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      final Uri url = Uri.parse(
+                          'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/Résumé.pdf?raw=true');
+                      launchUrl(url);
+                    }),
             ),
           ],
         ),
