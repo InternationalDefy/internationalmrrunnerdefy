@@ -7,6 +7,7 @@ import 'package:internationalmrrunnerdefy/Styles.dart';
 class ImageCardInfo {
   String title;
   double height;
+  double ratio;
   String content;
   String image;
   Color backgroundColor;
@@ -19,6 +20,7 @@ class ImageCardInfo {
     required this.image,
     required this.backgroundColor,
     required this.lhs,
+    this.ratio = 0,
     this.navigationWidget,
   });
 }
@@ -33,7 +35,7 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
           File(info.image),
           height: info.height,
           width: width,
-          fit: BoxFit.contain,
+          fit: BoxFit.fitHeight,
         ),
       );
   Widget _contentWidget(double width, double hPadding, double vPadding) =>
@@ -85,7 +87,9 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
       );
   @override
   Widget build(BuildContext context) {
-    double iWidth = info.height * 2;
+    double iWidth = info.ratio == 0
+        ? info.height * 2.0
+        : MediaQuery.of(context).size.width * info.ratio;
     double cWidth = MediaQuery.of(context).size.width - iWidth;
     double hPadding = MediaQuery.of(context).size.width * 0.07;
     hPadding = (cWidth - 2 * hPadding) > 0 ? hPadding : 0;

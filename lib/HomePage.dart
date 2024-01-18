@@ -10,7 +10,7 @@ import 'package:internationalmrrunnerdefy/main.dart';
 
 import 'CustomAppBar.dart';
 
-ScrollController sHomePageController = ScrollController();
+ScrollController? sHomePageController;
 
 List<ImageCardInfo> _infoList = [
   ImageCardInfo(
@@ -27,11 +27,13 @@ List<ImageCardInfo> _infoList = [
         style: gTitleStyleNormal,
       ),
       onPressed: () {
-        sHomePageController.animateTo(
-          sHomePageController.position.maxScrollExtent,
-          duration: const Duration(milliseconds: 500),
-          curve: Curves.linear,
-        );
+        if (null != sHomePageController) {
+          sHomePageController!.animateTo(
+            sHomePageController!.position.maxScrollExtent,
+            duration: const Duration(milliseconds: 500),
+            curve: Curves.linear,
+          );
+        }
       },
     ),
   ),
@@ -59,7 +61,7 @@ List<ImageCardInfo> _infoList = [
     title: 'As a Programmer',
     height: 400.0,
     content:
-        '     I used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     Last year I participated in Unity China\'s three-month summer intership, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
+        '     I used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     Last year I participated in Unity China\'s three-month summer internship, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
     image: 'E:\\Flutter\\internationalmrrunnerdefy\\img\\Unity0.jpeg',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
@@ -109,25 +111,20 @@ List<ImageCardInfo> _infoList = [
   ),
 ];
 
-class _HomepageBodyState extends State<_HomePageBody> {
-  int _index = 0;
+class _HomePageBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    sHomePageController = ScrollController();
     List<Widget> tobeChildren = List.empty(growable: true);
     for (ImageCardInfo info in _infoList) {
       tobeChildren.add(ImageCard(info: info));
     }
     tobeChildren.addAll(gBottomBarWidgetList());
     return ListView(
-      controller: sHomePageController,
+      controller: sHomePageController!,
       children: tobeChildren,
     );
   }
-}
-
-class _HomePageBody extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() => _HomepageBodyState();
 }
 
 class HomePage extends StatelessWidget {
