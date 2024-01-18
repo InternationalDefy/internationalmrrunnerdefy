@@ -36,7 +36,7 @@ List<ImageCardInfo> _infoList = [
     content:
         '    *Report to lead programmer, able to implement client features together with server programmers, designers and artists.\n    *Develop game features involing multiple gameplay systems, write Lua & Cpp code while considering safty and efficiency.\n    *Read and understand other gameplay systems, document my own codes in project workspace.',
     image:
-        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/newswordsman.png?raw=true',
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/newswordsman.jpg?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
@@ -60,7 +60,7 @@ List<ImageCardInfo> _infoList = [
     content:
         '    *Report to game producer, independently working.\n    *Both projects are using Cpp language and in-house game engine.\n    *Survey in porting issues involves multiple gameplay systems.\n    *Pre-research GLSL shaders porting.',
     image:
-        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/nier.png?raw=true',
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/nier.jpg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
   ),

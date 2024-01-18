@@ -83,7 +83,7 @@ List<ImageCardInfo> _infoList = [
     content:
         '     I am proactive in self-learning all the time, I\'ve read serval technical books during my working period, utilizing after-work time at home.\n     After I went back in university as a post-graduate, I was active on Internet, reading and trying different open-sourced engines like Bevy, Godot, etc',
     image:
-        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/bevy_bg.png?raw=true',
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/bevy_bg.jpg?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
     lhs: false,
     navigationWidget: TextButton(
