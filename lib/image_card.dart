@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:internationalmrrunnerdefy/Styles.dart';
+import 'package:internationalmrrunnerdefy/styles.dart';
 
 class ImageCardInfo {
   String title;
@@ -27,8 +27,8 @@ class ImageCardInfo {
 }
 
 class ImageCard extends StatelessWidget implements PreferredSizeWidget {
-  ImageCardInfo info;
-  ImageCard({required this.info});
+  final ImageCardInfo info;
+  const ImageCard({required this.info});
   @override
   Size get preferredSize => Size.fromHeight(info.height);
   Widget _imageWidget(double width) => Center(

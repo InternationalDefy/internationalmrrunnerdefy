@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:internationalmrrunnerdefy/IndustryExperience.dart';
-import 'package:internationalmrrunnerdefy/PersonalProject.dart';
-import 'package:internationalmrrunnerdefy/SelfLearning.dart';
-import 'HomePage.dart';
+
+import 'industry_experience.dart';
+import 'personal_projects.dart';
+import 'self_learning.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const InternationalMrRunnerDefy());

@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:internationalmrrunnerdefy/ImageCard.dart';
-import 'package:internationalmrrunnerdefy/Styles.dart';
-
-import 'CustomAppBar.dart';
+import 'image_card.dart';
+import 'styles.dart';
+import 'custom_appbar.dart';
 
 List<ImageCardInfo> _infoList = [
   ImageCardInfo(

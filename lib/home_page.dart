@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:internationalmrrunnerdefy/PersonalProject.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:internationalmrrunnerdefy/ImageCard.dart';
-import 'package:internationalmrrunnerdefy/IndustryExperience.dart';
-import 'package:internationalmrrunnerdefy/Styles.dart';
-import 'package:internationalmrrunnerdefy/main.dart';
-
-import 'CustomAppBar.dart';
+import 'personal_projects.dart';
+import 'industry_experience.dart';
+import 'image_card.dart';
+import 'custom_appbar.dart';
+import 'styles.dart';
+import 'main.dart';
 
 ScrollController? sHomePageController;
 

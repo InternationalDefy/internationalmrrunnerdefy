@@ -6,11 +6,10 @@ import 'package:url_launcher/url_launcher.dart';
 
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
 
-import 'package:internationalmrrunnerdefy/IndustryExperience.dart';
-import 'package:internationalmrrunnerdefy/HomePage.dart';
-import 'package:internationalmrrunnerdefy/PersonalProject.dart';
-import 'package:internationalmrrunnerdefy/SelfLearning.dart';
-import 'Styles.dart';
+import 'industry_experience.dart';
+import 'home_page.dart';
+import 'personal_projects.dart';
+import 'styles.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
