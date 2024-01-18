@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:internationalmrrunnerdefy/Styles.dart';
 
 class ImageCardInfo {
@@ -10,11 +9,13 @@ class ImageCardInfo {
   double ratio;
   String content;
   String image;
+  String subtitle;
   Color backgroundColor;
   bool lhs;
   Widget? navigationWidget;
   ImageCardInfo({
     required this.title,
+    this.subtitle = "",
     required this.height,
     required this.content,
     required this.image,
@@ -38,53 +39,58 @@ class ImageCard extends StatelessWidget implements PreferredSizeWidget {
           fit: BoxFit.fitHeight,
         ),
       );
-  Widget _contentWidget(double width, double hPadding, double vPadding) =>
-      Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: hPadding,
-          vertical: vPadding,
+  List<Widget> _buildTitleAndSubtitle() {
+    List<Widget> widgets = List.empty(growable: true);
+    widgets.add(Text(
+      info.title,
+      style: gTitleStyleNormal,
+    ));
+    if ('' != info.subtitle) {
+      widgets.add(Text(
+        info.subtitle,
+        style: gTitleStyleItalic,
+      ));
+    }
+    return widgets;
+  }
+
+  Widget _contentWidget(double width, double hPadding, double vPadding) {
+    List<Widget> widgets = List.empty(growable: true);
+    widgets.addAll(_buildTitleAndSubtitle());
+    widgets.addAll([
+      const Padding(
+        padding: EdgeInsets.only(top: 20.0),
+      ),
+      Text(
+        info.content,
+        style: gTextStyleSmall,
+        textAlign: TextAlign.left,
+      ),
+    ]);
+    if (null != info.navigationWidget) {
+      widgets.addAll([
+        const Padding(
+          padding: EdgeInsets.only(top: 20.0),
         ),
-        child: SizedBox(
-          height: info.height,
-          width: width - 2 * hPadding,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: null == info.navigationWidget
-                ? [
-                    Text(
-                      info.title,
-                      style: gTitleStyleNormal,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    Text(
-                      info.content,
-                      style: gTextStyleSmall,
-                      textAlign: TextAlign.left,
-                    ),
-                  ]
-                : [
-                    Text(
-                      info.title,
-                      style: gTitleStyleNormal,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    Text(
-                      info.content,
-                      style: gTextStyleSmall,
-                      textAlign: TextAlign.left,
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.only(top: 20.0),
-                    ),
-                    info.navigationWidget!,
-                  ],
-          ),
+        info.navigationWidget!,
+      ]);
+    }
+    return Padding(
+      padding: EdgeInsets.symmetric(
+        horizontal: hPadding,
+        vertical: vPadding,
+      ),
+      child: SizedBox(
+        height: info.height,
+        width: width - 2 * hPadding,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: widgets,
         ),
-      );
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     double iWidth = info.ratio == 0

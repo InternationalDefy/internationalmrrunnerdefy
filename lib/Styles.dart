@@ -22,10 +22,19 @@ TextStyle gTitleStyleNormal = GoogleFonts.russoOne(
 TextStyle gTitleStyleSmall = GoogleFonts.russoOne(
   textStyle: const TextStyle(
     color: Colors.black87,
-    fontSize: 22.0,
+    fontSize: 24.0,
     fontWeight: FontWeight.w700,
     fontStyle: FontStyle.normal,
-    decoration: TextDecoration.underline,
+    decoration: TextDecoration.none,
+  ),
+);
+TextStyle gTitleStyleItalic = GoogleFonts.russoOne(
+  textStyle: const TextStyle(
+    color: Colors.black87,
+    fontSize: 20.0,
+    fontWeight: FontWeight.w700,
+    fontStyle: FontStyle.italic,
+    decoration: TextDecoration.none,
   ),
 );
 

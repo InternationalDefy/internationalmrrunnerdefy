@@ -8,8 +8,8 @@ import 'CustomAppBar.dart';
 
 List<ImageCardInfo> _infoList = [
   ImageCardInfo(
-    title:
-        'Unity China, June,2023-Sept,2023\nIntern engine programmer in Unity Engine',
+    title: 'Unity China, June,2023-Sept,2023',
+    subtitle: 'Intern engine programmer in Unity Engine',
     height: 540.0,
     ratio: 0.45,
     content:
@@ -29,8 +29,8 @@ List<ImageCardInfo> _infoList = [
     ),
   ),
   ImageCardInfo(
-    title:
-        'Perfect World, Jan,2021-July,2021\nGame client programmer in Newswordsman moblie game',
+    title: 'Perfect World, Jan,2021-July,2021',
+    subtitle: 'Game client programmer in Newswordsman moblie game',
     height: 540.0,
     ratio: 0.45,
     content: '',
@@ -50,8 +50,9 @@ List<ImageCardInfo> _infoList = [
     ),
   ),
   ImageCardInfo(
-    title:
-        'Virtuos, July,2020-Dec,2020\nJunior software engineer in Horizen Zero Dawn and Nier\'s porting',
+    title: 'Virtuos, July,2020-Dec,2020',
+    subtitle:
+        'Junior software engineer in Horizen Zero Dawn and Nier\'s porting',
     height: 540.0,
     ratio: 0.45,
     content: 'Junior software engineer, \n',
@@ -60,8 +61,8 @@ List<ImageCardInfo> _infoList = [
     lhs: true,
   ),
   ImageCardInfo(
-    title:
-        'Seasun Gaming, June,2019-Aug,2019\nIntern UE4 gameplay programmer in Sunken Centry moblie game.',
+    title: 'Seasun Gaming, June,2019-Aug,2019',
+    subtitle: 'Intern UE4 gameplay programmer in Sunken Centry moblie game.',
     height: 540.0,
     ratio: 0.45,
     content: 'Intern UE4 gameplay programmer, ',
