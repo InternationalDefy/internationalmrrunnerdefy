@@ -38,7 +38,7 @@ TextStyle gTitleStyleItalic = GoogleFonts.russoOne(
   ),
 );
 
-TextStyle gGlitchStyleLarge = GoogleFonts.rubikGlitch(
+TextStyle gGlitchStyleLarge = GoogleFonts.russoOne(
   textStyle: const TextStyle(
     color: Colors.black87,
     fontSize: 48.0,
