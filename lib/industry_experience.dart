@@ -7,6 +7,28 @@ import 'custom_appbar.dart';
 
 List<ImageCardInfo> _infoList = [
   ImageCardInfo(
+    title: 'Timi L2 Studio, March,2024-Sept,2024',
+    subtitle: 'Game engine programmer(UE4) in HoK:World',
+    height: 540.0,
+    ratio: 0.45,
+    content:
+        '    *Multi-platform Open world game built with Unreal Engine.\n    *Report to lead programmer, independently working with minimum advice.\n    *Implement engine tools for development.\n    *Implement middle-class systems to drive the development of game.\n    *Performance optimizations among multiple systems, low-levels and high-levels.',
+    image:
+        'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/hokworld.png?raw=true',
+    backgroundColor: Colors.lightBlue[200]!,
+    lhs: true,
+    navigationWidget: TextButton(
+      child: Text(
+        'HoK: World',
+        style: gTitleStyleNormal,
+      ),
+      onPressed: () {
+        final Uri url = Uri.parse('https://world.qq.com/');
+        launchUrl(url);
+      },
+    ),
+  ),
+  ImageCardInfo(
     title: 'Unity China, June,2023-Sept,2023',
     subtitle: 'Intern engine programmer in Unity Engine',
     height: 540.0,
@@ -15,7 +37,7 @@ List<ImageCardInfo> _infoList = [
         '    *Multi-platform commercial game engine written in Cpp.\n    *Report to senior programmer, assisted working with minimum advice.\n    *Pre-research WebGPU graphics API for WebGLPlatform(for browsers).\n    *Implement WebGPU to a stage that engine runtime can compile into .wasm file and run to draw a triangle.\n    *Read and understand previous engine codes with docs and advice, ability and habbit to write understandable docs.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/Unity.png?raw=true',
-    backgroundColor: Colors.lightBlue[200]!,
+    backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
     navigationWidget: TextButton(
       child: Text(
@@ -37,7 +59,7 @@ List<ImageCardInfo> _infoList = [
         '    *Report to lead programmer, able to implement client features together with server programmers, designers and artists.\n    *Develop game features involing multiple gameplay systems, write Lua & Cpp code while considering safty and efficiency.\n    *Read and understand other gameplay systems, document my own codes in project workspace.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/newswordsman.jpg?raw=true',
-    backgroundColor: Colors.lightBlue[50]!,
+    backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
       child: Text(
@@ -61,7 +83,7 @@ List<ImageCardInfo> _infoList = [
         '    *Report to game producer, independently working.\n    *Both projects are using Cpp language and in-house game engine.\n    *Survey in porting issues involves multiple gameplay systems.\n    *Pre-research GLSL shaders porting.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/nier.jpg?raw=true',
-    backgroundColor: Colors.lightBlue[200]!,
+    backgroundColor: Colors.lightBlue[50]!,
     lhs: true,
   ),
   ImageCardInfo(
@@ -73,7 +95,7 @@ List<ImageCardInfo> _infoList = [
         '    *Report to senior programmer, assisted wroking.\n    *Write Slate UI plugin for Unreal engine.\n    *Basic understanding of Unreal engine\'s classes.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/sunkencentry.jpg?raw=true',
-    backgroundColor: Colors.lightBlue[50]!,
+    backgroundColor: Colors.lightBlue[200]!,
     lhs: true,
     navigationWidget: TextButton(
       child: Text(

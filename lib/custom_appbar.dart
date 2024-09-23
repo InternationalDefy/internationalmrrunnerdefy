@@ -107,7 +107,7 @@ List<Widget> gBottomBarWidgetList() {
         IconButton(
           onPressed: () {
             Clipboard.setData(
-                const ClipboardData(text: "thetruemrrunner@gmail.com"));
+                const ClipboardData(text: "dteye1533014901@126.com"));
           },
           icon: const Icon(
             MaterialIcons.email,
@@ -116,7 +116,7 @@ List<Widget> gBottomBarWidgetList() {
         ),
         const Padding(padding: EdgeInsets.only(left: 10.0)),
         Text(
-          'thetruemrrunner@gmail.com',
+          'dteye1533014901@126.com',
           style: gTextStyleNormal,
         ),
         const Padding(padding: EdgeInsets.only(left: 20.0)),

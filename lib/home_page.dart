@@ -16,7 +16,7 @@ List<ImageCardInfo> _infoList = [
     title: 'This is Mr.Runner',
     height: 400.0,
     content:
-        '     A Gamer, Game-developer, Raver and Bicycle-rider. Currently a post-graduate in software engineering, one-and-a-half year of game development experience. \n     ACTIVE for ANY oppotunities as a game programmer.',
+        '     A Gamer, Game-developer, Raver and Bicycle-rider. Currently a post-graduate in software engineering, two-and-a-half year of game development experience. \n     Already received retention of Timi L2 Studio.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/cos1.jpg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
@@ -41,7 +41,7 @@ List<ImageCardInfo> _infoList = [
     title: 'As a Gamer',
     height: 400.0,
     content:
-        '     I have a decent game collection. I\'ve played many different types of games, forming a plenty of gaming experience and the sense of good game design. Constantly thinking over design and implementations while playing games, and have written many up-voted game reviews.',
+        '     I have a decent game collection. I\'ve played many different types of games, forming a massive quantity of gaming experience and the sense of good game design. Constantly thinking over design and implementations while playing games, and have written many up-voted game reviews.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/steam_bg.png?raw=true',
     backgroundColor: Colors.lightBlue[50]!,
@@ -62,7 +62,7 @@ List<ImageCardInfo> _infoList = [
     title: 'As a Programmer',
     height: 400.0,
     content:
-        '     I used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     Last year I participated in Unity China\'s three-month summer internship, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
+        '     Currently worked in Timi L2 studio, used to work in Virtuos and Perfect World, participating in console games porting and mobile game client development.\n     In 2023 I participated in Unity China\'s three-month summer internship, pre-researching WebGPU graphics API for Unity Engine, it was a very rewarding experience for me.',
     image:
         'https://github.com/InternationalDefy/internationalmrrunnerdefy/blob/main/img/Unity0.jpeg?raw=true',
     backgroundColor: Colors.lightBlue[200]!,
